@@ -1,0 +1,25 @@
+.img-fluid {
+  margin: 10px;
+}
+
+.saved {
+  color: green;
+  /* font-size: 12px; */
+  position: absolute;
+  top: 1rem;
+  right: 5.5rem;
+  cursor: pointer;
+}
+
+.remove {
+  color: #ff1744;
+  /* font-size: 12px; */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.card > .remove:hover {
+  color: #d50000;
+}

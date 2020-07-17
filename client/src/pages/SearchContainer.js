@@ -42,7 +42,7 @@ class SearchContainer extends Component {
   
   removeBook = (id) => {
     console.log(this.state.results)
-    const newBooks = this.state.results.filter(book => book.id != id)
+    const newBooks = this.state.results.filter(book => book.id !== id)
     this.setState({ results: newBooks});
   }
 

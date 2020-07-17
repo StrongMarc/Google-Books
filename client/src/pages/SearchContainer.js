@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
 import SearchForm from "../components/SearchForm";
-import ResultList from "../components/ResultList";
+import ResultCards from "../components/ResultCards";
 import API from "../utils/API";
 
 // see activity 20
@@ -9,8 +8,7 @@ class SearchContainer extends Component {
   
   state = {
     search: "",
-    results: [],
-    copyResults: [],
+    results: []
   };
 
    componentDidMount() {
@@ -20,7 +18,7 @@ class SearchContainer extends Component {
   searchBooks = query => {
     API.search(query)
       // .then(res => this.setState({ results: res.data.results, copyResults: res.data.results}))
-      .then(res => this.setState({ results: res.data.items, copyResults:res.data.items },
+      .then(res => this.setState({ results: res.data.items },
       () => console.log(this.state.results)))  
       .catch(err => console.log(err));
   };
@@ -34,12 +32,6 @@ class SearchContainer extends Component {
     });
     
     console.log(this.state.results)
-    // filters to compare the value is in either first or last name
-    // const employee = this.state.copyResults.filter(employee => {
-    //   return employee.name.first.toLowerCase().includes(value.toLowerCase())  ||
-    //   employee.name.last.toLowerCase().includes(value.toLowerCase())
-    // })
-    // this.setState({results: employee})
   };
 
   handleFormSubmit = event => {
@@ -47,7 +39,7 @@ class SearchContainer extends Component {
     console.log(this.state.search)
     this.searchBooks(this.state.search);
   };
-
+  
   removeBook = (id) => {
     console.log(this.state.results)
     const newBooks = this.state.results.filter(book => book.id != id)
@@ -57,13 +49,12 @@ class SearchContainer extends Component {
   render() {
     return (
       <div>
-        <Jumbotron />
         <SearchForm
           search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <ResultList 
+        <ResultCards 
           results={this.state.results} 
           removeBook={this.removeBook}
           />

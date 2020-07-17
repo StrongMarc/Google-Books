@@ -2,11 +2,7 @@ import React from "react";
 
 function SearchForm(props) {
   console.log(props)
-  
-  // if (props.search.length>0) {
-  //   console.log(props.search[0].gender)
-  // }
-  
+   
   return (
     <div className="container">
       <form>

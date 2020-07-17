@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/styleRestults.css";
 import noImage from "../images/noImage.PNG"
 
-function ResultList(props) {
+function ResultCards(props) {
   // console.log(props)
   console.log(props.results)
   
@@ -29,9 +29,7 @@ function ResultList(props) {
                   </div>
                 </div>
                 <div className="col-md-10">
-                  {/* <div className="card-body"> */}
-                    <h5 className="card-title">{result.volumeInfo.description}</h5>
-                  {/* </div> */}
+                  <h5 className="card-text">{result.volumeInfo.description}</h5>
                 </div>
               </div>
               <button className="saved" >Saved</button>
@@ -45,4 +43,4 @@ function ResultList(props) {
   );
 }
 
-export default ResultList;
+export default ResultCards;

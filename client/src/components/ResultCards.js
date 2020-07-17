@@ -13,13 +13,13 @@ function ResultCards(props) {
       <div className="row">
         {props.results.map((result, i) => (
           <div className="card" key={result.id}>
-            <div class="card-body">
-              <h4 class="card-title"> 
+            <div className="card-body">
+              <h4 className="card-title"> 
                 <a href={result.volumeInfo.infoLink}>{result.volumeInfo.title}</a>
               </h4>
               {/* <p class="card-text">Written by {result.volumeInfo.authors + ((result.volumeInfo.authors.length-1) > i ? "-- , -- " : "")}</p> */}
               {/* <p class="card-text">Written by {result.volumeInfo.authors}</p> */}
-              <p class="card-text">Written by {result.volumeInfo.authors.join(", ")}</p>
+              <p className="card-text">Written by {result.volumeInfo.authors.join(", ")}</p>
               <div className="row no-gutters">
                 <div className="col-md-2">
                   <div className="img-container">

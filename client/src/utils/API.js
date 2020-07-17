@@ -7,5 +7,9 @@ export default {
   search: function(query) {
     console.log(BASEURL + query)
     return axios.get(BASEURL + query);
+  },
+
+  getBooks: function() {
+    return axios.get("/api/books");
   }
 };

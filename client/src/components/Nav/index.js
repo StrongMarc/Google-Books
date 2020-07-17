@@ -3,11 +3,33 @@ import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
 function Nav() {
+
+  const styles = {
+    blueLetter: {
+      color: 'MidnightBlue'
+    },
+    redLetter: {
+      color: 'red'
+    },
+    orangeLetter: {
+      color: 'orange'
+    },
+    greenLetter: {
+      color: 'YellowGreen'
+    }
+  };
+
   return (
     <div className="navbar navbar-expand-lg navbar-dark bg-primary ">
   
       <Link className="navbar-brand" to="/">
-        Google Books
+      <span style={styles.blueLetter}> G</span>
+          <span style={styles.redLetter}>o</span>
+          <span style={styles.orangeLetter}>o</span>
+          <span style={styles.blueLetter}>g</span>
+          <span style={styles.greenLetter}>l</span>
+          <span style={styles.redLetter}>e </span>
+           Books
       </Link>
       <div>   
         <ul className="navbar-nav" to="/">

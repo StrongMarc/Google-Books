@@ -42,8 +42,8 @@ function Nav() {
           </li>
           <li className="nav-item">
             <Link
-              to="/saved"
-              className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}>
+              to="/books"
+              className={window.location.pathname === "/books" ? "nav-link active" : "nav-link"}>
               Saved
             </Link>
           </li>
